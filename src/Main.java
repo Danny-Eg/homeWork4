@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Задание1");
 
-        int clientOS = 2;
+        int clientOS = 1;
         if (clientOS == 0) {
             System.out.println("«Установите версию приложения для iOS по ссылке»");
         } else if (clientOS == 1) {
@@ -13,18 +13,18 @@ public class Main {
 
         System.out.println("Задание2");
 
-        int clientOS1 = 1;
-        int year1 = 2015;
-        int clientOS1Year = 2016;
-        if (clientOS1 == 0 && clientOS1Year < year1) {
+        int clientOS1 = 0;
+        int clientDeviceYear = 2014;
+
+        if (clientOS1 == 0 && clientDeviceYear < 2015){
             System.out.println("«Установите облегченную версию приложения для iOS по ссылке».");
-        } else if (clientOS1 == 0 && clientOS1Year >= year1) {
+        } else if (clientOS1 == 0 && clientDeviceYear >=2015 ){
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS1 == 1 && clientOS1Year < year1) {
+        } else if (clientOS1 == 1 && clientDeviceYear < 2015){
             System.out.println("«Установите облегченную версию приложения для Android по ссылке».");
-        } else if (clientOS1 == 1 && clientOS1Year >= year1) {
+        } else if (clientOS1 == 1 && clientDeviceYear >= 2015){
             System.out.println("«Установите версию приложения для Android по ссылке»");
-        } else {
+        } else{
             System.out.println("Нет результата");
         }
 
@@ -32,21 +32,17 @@ public class Main {
 
         int year = 2401;
         if (year >= 1584 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
-            System.out.println("« " + year + " год является високосным»");
+            System.out.println(year + " год является високосным»");
         } else {
-            System.out.println(" « " + year + " год не является високосным»");
+            System.out.println(year + " год не является високосным»");
         }
 
         System.out.println("Задание4");
 
-        int deliveryDistance = 100;
+        int deliveryDistance = 15;
         int deliveryDay = 1;
         if (deliveryDistance <= 20) {
-            try {
-                System.out.println("Потребуется дней: " + deliveryDay + " ");
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
+            System.out.println("Потребуется дней: " + deliveryDay + " ");
         } else if (deliveryDistance <= 60) {
             deliveryDay++;
             System.out.println("Потребуется дней: " + deliveryDay + " ");
